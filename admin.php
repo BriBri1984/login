@@ -7,7 +7,7 @@
 
 	<div class="jumbotron">
 		<h1 class="text-center"><?php 
-
+		//function from line 554 if email is set
 		if(logged_in()){
 
 			echo "Logged in";

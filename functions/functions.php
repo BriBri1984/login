@@ -452,7 +452,7 @@ function validate_user_login(){
 
 			} else {
 
-
+				//the variables are passed in this function for login_user
 				if(login_user($email, $password, $remember)) {
 
 
@@ -505,11 +505,13 @@ function validate_user_login(){
 
 				if($remember == "on") {
 
+					//set cookie for 86,400 seconds(1 day)
+					//check logout.php
 					setcookie('email', $email, time() + 86400);
 
 				}
 
-
+				
 				$_SESSION['email'] = $email;
 
 
@@ -552,7 +554,7 @@ function validate_user_login(){
 
 
 function logged_in(){
-
+	//if email is set or the cookie is set
 	if(isset($_SESSION['email']) || isset($_COOKIE['email'])){
 
 
